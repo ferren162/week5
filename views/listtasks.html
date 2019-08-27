@@ -1,0 +1,29 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1><a href="index.html">Home</a>&nbsp;<a href="newtask.html">Add new Task</a></h1>
+    </br>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Due Date</td>
+                <td>Description</td>
+            </tr>
+            <% for (var i = 0; i < taskDB.length; i++){ %>
+                <tr>
+                    <td>
+                        <%= taskDB[i].taskname %>
+                    </td>
+                    <td>
+                        <%= taskDB[i].taskdue %>
+                    </td>
+                    <td>
+                        <%= taskDB[i].taskdesc %>
+                    </td>
+                </tr>
+            <% }%>
+        </table>
+</body>
+</html>
