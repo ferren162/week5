@@ -32,7 +32,7 @@ app.get("/listtasks.html", (req, res) => {
 
 app.post("/newtask", (req, res) => {
     db.push(req.body);
-    res.render("newtask.html", { taskDB: db});
+    res.render("listtasks.html", { taskDB: db});
 });
 
 app.listen(8080);
